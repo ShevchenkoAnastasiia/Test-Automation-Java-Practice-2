@@ -17,25 +17,25 @@ public class Main {
      * Implement code according to description of task 2.
      * </summary>
      */
-    public static int task2(int N) {
-         static int countBinaries(int N)
+    public static int task2(int value) {
+         static int countBinaries(int value)
     {
         int ctr = 1;
         int ans = 0;
-        while (N > 0)
+        while (value > 0)
         {
 
-            if (N % 10 == 1)
+            if (value % 10 == 1)
             {
                 ans += Math.pow(2, ctr - 1);
             }
 
-            else if (N % 10 > 1)
+            else if (value % 10 > 1)
             {
                 ans = (int) (Math.pow(2, ctr) - 1);
             }
             ctr++;
-            N /= 10;
+            value /= 10;
         }
         return ans;
     }
@@ -49,31 +49,26 @@ public class Main {
      * Implement code according to description of task 3.
      * </summary>
      */
-    public static int calculateSum(int n) {
+    public static int task3(int value) {
 
-            if (n <= 0)
+            if (value <= 0)
                 return 0;
 
-            int fibo[]=new int[n+1];
+            int fibo[]=new int[value+1];
             fibo[0] = 0; fibo[1] = 1;
 
             int sum = fibo[0] + fibo[1];
 
-            for (int i=2; i<=n; i++)
+            for (int i=2; i<=value; i++)
             {
                 fibo[i] = fibo[i-1]+fibo[i-2];
                 sum += fibo[i];
             }
 
             return sum;
-        }
+   
 
-        public static void main(String args[])
-        {
-            int n = 4;
-            System.out.println("Sum of Fibonacci" +
-                    " numbers is : "+ calculateSum(n));
-        }
+    
 
 
         throw new UnsupportedOperationException();
