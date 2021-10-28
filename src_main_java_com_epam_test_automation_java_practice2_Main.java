@@ -2,6 +2,22 @@ package com.epam.test.automation.java.practice2;
 
 public class Main {
     
+    public static int task1(int value) {
+        int oddSum, oddSum1;
+        oddSum = 0;
+        oddSum1=0;
+
+        if (value % 2 == 0) {
+            int[] count = new int[10];
+            String str = Integer.toString(value);
+            for (int i = 0; i < str.length(); i++)
+                if (count[i] % 2 != 0) {
+                    oddSum1 = oddSum + i;
+                }
+        }
+        return oddSum1;
+    }
+    
     static int task2(int value)
     {
         int ctr = 1;
