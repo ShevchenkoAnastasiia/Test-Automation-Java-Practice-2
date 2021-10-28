@@ -1,8 +1,31 @@
 package com.epam.test.automation.java.practice2;
 
 public class Main {
+    
+    static int task3(int value)
+    {
+        int ctr = 1;
+        int ans = 0;
+        while (value > 0)
+        {
 
-    static int task2 (int value)
+            if (value % 10 == 1)
+            {
+                ans += Math.pow(2, ctr - 1);
+            }
+
+            else if (value % 10 > 1)
+            {
+                ans = (int) (Math.pow(2, ctr) - 1);
+            }
+            ctr++;
+            value /= 10;
+        }
+        return ans;
+    }
+
+
+    static int task3 (int value)
         {
             if (value <= 0)
                 return 0;
@@ -25,31 +48,10 @@ public class Main {
         {
             int value = 4;
             System.out.println("Sum of Fibonacci" +
-                    " numbers is : "+ task2(value) );
+                    " numbers is : "+ task3(value) );
         }
-    }
+    
 
-static int task3(int value)
-    {
-        int ctr = 1;
-        int ans = 0;
-        while (value > 0)
-        {
-
-            if (value % 10 == 1)
-            {
-                ans += Math.pow(2, ctr - 1);
-            }
-
-            else if (value % 10 > 1)
-            {
-                ans = (int) (Math.pow(2, ctr) - 1);
-            }
-            ctr++;
-            value /= 10;
-        }
-        return ans;
-    }
 
     public static void main (String[] args)
     {
