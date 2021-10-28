@@ -28,3 +28,32 @@ public class Main {
                     " numbers is : "+ task2(value) );
         }
     }
+
+static int task3(int value)
+    {
+        int ctr = 1;
+        int ans = 0;
+        while (value > 0)
+        {
+
+            if (value % 10 == 1)
+            {
+                ans += Math.pow(2, ctr - 1);
+            }
+
+            else if (value % 10 > 1)
+            {
+                ans = (int) (Math.pow(2, ctr) - 1);
+            }
+            ctr++;
+            value /= 10;
+        }
+        return ans;
+    }
+
+    public static void main (String[] args)
+    {
+        int value = 20;
+        System.out.print(task3 (value));
+    }
+}
