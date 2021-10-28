@@ -2,7 +2,7 @@ package com.epam.test.automation.java.practice2;
 
 public class Main {
     
-    static int task3(int value)
+    static int task2(int value)
     {
         int ctr = 1;
         int ans = 0;
@@ -22,6 +22,11 @@ public class Main {
             value /= 10;
         }
         return ans;
+    }
+        public static void main (String[] args)
+    {
+        int value = 20;
+        System.out.print(task2 (value));
     }
 
 
@@ -50,12 +55,7 @@ public class Main {
             System.out.println("Sum of Fibonacci" +
                     " numbers is : "+ task3(value) );
         }
-    
-
-
-    public static void main (String[] args)
-    {
-        int value = 20;
-        System.out.print(task3 (value));
-    }
 }
+
+
+
